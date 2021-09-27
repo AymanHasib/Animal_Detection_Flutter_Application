@@ -1,6 +1,4 @@
-# blsd
-
-A new Flutter application.
+A new Flutter application it is build by using Dart and Flutter Frameworks.
 
 ## Getting Started
 
