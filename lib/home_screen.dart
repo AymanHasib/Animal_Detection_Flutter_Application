@@ -66,16 +66,16 @@ class _HomeScreenState extends State<HomeScreen>
               Column(
                 children: [
                   Container(
-                    child: Image.asset('images/icon_without_background.png'),
+                    child: Image.asset('images/appLogo.png'),
                     height: 150.0,
                     width: 300.0,
                   ),
                   SizedBox(
                     width: 250.0,
                     child: TextLiquidFill(
-                      text: 'বাংলা অক্ষর\n চিহ্ন সনাক্তকরণ',
+                      text: 'Find Out The Animal',
                       textAlign: TextAlign.center,
-                      waveColor: Colors.yellowAccent,
+                      waveColor: Colors.black,
                       boxBackgroundColor: animation.value,
                       textStyle: TextStyle(
                         fontSize: 35.0,
@@ -87,8 +87,8 @@ class _HomeScreenState extends State<HomeScreen>
                 ],
               ),
               RoundedButton(
-                title: 'ছবি তুলুন',
-                color: Colors.green,
+                title: 'Capture Image',
+                color: Colors.purple,
                 onPressed: () {
                   // Navigator.push(context, '/camera');
                   Navigator.push(
@@ -102,8 +102,8 @@ class _HomeScreenState extends State<HomeScreen>
                 },
               ),
               RoundedButton(
-                title: 'গ্যালারি থেকে নিন',
-                color: Colors.red,
+                title: 'Select Image From Gallery',
+                color: Colors.deepPurple,
                 onPressed: () {
                   Navigator.push(
                     context,

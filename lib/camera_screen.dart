@@ -38,7 +38,7 @@ class _CameraScreenState extends State<CameraScreen> {
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('images/home.jpg'), fit: BoxFit.cover),
+                image: AssetImage('images/fish.jpg'), fit: BoxFit.cover),
           ),
           child: Column(
             children: [
@@ -94,8 +94,8 @@ class _CameraScreenState extends State<CameraScreen> {
                 height: 25,
               ),
               RoundedButton(
-                  title: 'ছবি ক্যাপচার করুন',
-                  color: Colors.purpleAccent,
+                  title: 'Capture Your Image',
+                  color: Colors.indigoAccent,
                   onPressed: () {
                     captureImageFromCamera();
                   }),

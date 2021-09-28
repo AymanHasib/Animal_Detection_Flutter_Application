@@ -76,7 +76,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('images/home.jpg'), fit: BoxFit.cover),
+                image: AssetImage('images/Tiger.jpg'), fit: BoxFit.cover),
           ),
           child: Column(
             children: [
@@ -132,8 +132,8 @@ class _GalleryScreenState extends State<GalleryScreen> {
                 height: 25,
               ),
               RoundedButton(
-                  title: 'ছবি নির্বাচন করুন',
-                  color: Colors.purpleAccent,
+                  title: 'Select Image',
+                  color: Colors.indigoAccent,
                   onPressed: () {
                     chooseImageFromGallery();
                   }),
