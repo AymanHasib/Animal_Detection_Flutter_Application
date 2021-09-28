@@ -1,6 +1,7 @@
-import 'package:blsd/camera_screen.dart';
-import 'package:blsd/home_screen.dart';
+import 'package:Animal_detection_app/home_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'home_screen.dart';
 
 void main() {
   runApp(BLSDapp());

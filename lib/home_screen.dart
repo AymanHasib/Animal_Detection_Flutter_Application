@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen>
         AnimationController(duration: Duration(seconds: 3), vsync: this);
 
     // animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
-    animation = ColorTween(begin: Colors.redAccent, end: Colors.greenAccent)
+    animation = ColorTween(begin: Colors.blue, end: Colors.cyanAccent)
         .animate(controller);
 
     controller.forward();
@@ -75,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen>
                     child: TextLiquidFill(
                       text: 'Find Out The Animal',
                       textAlign: TextAlign.center,
-                      waveColor: Colors.black,
+                      waveColor: Colors.yellowAccent,
                       boxBackgroundColor: animation.value,
                       textStyle: TextStyle(
                         fontSize: 35.0,

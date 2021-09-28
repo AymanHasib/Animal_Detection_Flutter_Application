@@ -1,5 +1,8 @@
 A new Flutter application it is build by using Dart and Flutter Frameworks.
 
+This Application can detect Animals more precisely means Mammals.
+We give this app any kind of animal photo then the app can give us the animal name.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

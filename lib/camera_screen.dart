@@ -43,7 +43,7 @@ class _CameraScreenState extends State<CameraScreen> {
           child: Column(
             children: [
               BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 8.0, sigmaY: 8.0),
+                filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
                 child: Container(
                   color: Colors.transparent,
                 ),
