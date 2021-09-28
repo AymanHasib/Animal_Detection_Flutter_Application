@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:core';
 import 'package:image_picker/image_picker.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:tflite/tflite.dart';
 import 'rounded_button.dart';
 
 class CameraScreen extends StatefulWidget {
@@ -17,16 +19,51 @@ class CameraScreen extends StatefulWidget {
 class _CameraScreenState extends State<CameraScreen> {
   File? _image;
   ImagePicker picker = ImagePicker();
+  String result = '';
 
   void initState() {
     super.initState();
     picker = ImagePicker();
+    loadModelFiles();
+  }
+
+  loadModelFiles() async {
+    String? res = await Tflite.loadModel(
+        model: "assets/mobilenet_v1_1.0_224.tflite",
+        labels: "assets/mobilenet_v1_1.0_224.txt",
+        numThreads: 1,
+        isAsset: true,
+        useGpuDelegate: false);
+  }
+
+  doImageClassification() async {
+    result = '';
+    var recognitions = await Tflite.runModelOnImage(
+        path: _image!.path,
+        imageMean: 0.0,
+        imageStd: 255.0,
+        numResults: 3,
+        threshold: 0.2,
+        asynch: true);
+
+    if (recognitions != null) {
+      recognitions.forEach((element) {
+        result += element['label'] +
+            '  ' +
+            ((element['confidence'] * 100) as double).toStringAsFixed(0) +
+            '%\n';
+      });
+    }
+    setState(() {
+      result;
+    });
   }
 
   Future<void> captureImageFromCamera() async {
     final pickedFile = await picker.getImage(source: ImageSource.camera);
     setState(() {
       _image = File(pickedFile!.path);
+      doImageClassification();
     });
   }
 
@@ -99,6 +136,23 @@ class _CameraScreenState extends State<CameraScreen> {
                   onPressed: () {
                     captureImageFromCamera();
                   }),
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                child: GradientText(
+                  '$result',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 36,
+                    fontWeight: FontWeight.w900,
+                  ),
+                  gradientType: GradientType.radial,
+                  radius: 1,
+                  colors: [
+                    Colors.cyanAccent,
+                    Colors.blueAccent,
+                  ],
+                ),
+              ),
             ],
           ),
         ),

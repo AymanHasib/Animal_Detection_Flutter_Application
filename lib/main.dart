@@ -1,13 +1,12 @@
 import 'package:Animal_detection_app/home_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'home_screen.dart';
 
 void main() {
-  runApp(BLSDapp());
+  runApp(ADapp());
 }
 
-class BLSDapp extends StatelessWidget {
+class ADapp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

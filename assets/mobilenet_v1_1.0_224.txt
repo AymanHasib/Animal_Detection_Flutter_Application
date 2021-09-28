@@ -1,16 +1,16 @@
 background
 tench
-গোল্ডফিশ
+goldfish
 great white shark
-বাঘ হাঙ্গর
+tiger shark
 hammerhead
 electric ray
 stingray
-মোরগ
+cock
 hen
-উটপাখি
+ostrich
 brambling
-গোল্ডফিন্চ
+goldfinch
 house finch
 junco
 indigo bunting
@@ -45,11 +45,11 @@ agama
 frilled lizard
 alligator lizard
 Gila monster
-সবুজ টিকটিকি
-আফ্রিকান গিরগিটি
+green lizard
+African chameleon
 Komodo dragon
-আফ্রিকান কুমির
-আমেরিকান এলিগেটর
+African crocodile
+American alligator
 triceratops
 thunder snake
 ringneck snake
@@ -290,8 +290,8 @@ lynx
 leopard
 snow leopard
 jaguar
-সিংহ
-বাঘ
+lion
+tiger
 cheetah
 brown bear
 American black bear
